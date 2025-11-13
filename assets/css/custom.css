@@ -1,0 +1,162 @@
+/* assets/css/custom.css */
+
+/* ===== Цветовые переменные (Bootstrap-совместимо) ===== */
+:root {
+  --custom-primary: #0056d2;
+  --custom-accent: #ff6b00;
+  --custom-accent-hover: #e05a00;
+  --custom-bg-light: #f8f9fa;
+}
+
+/* ===== Кнопки — кастомизация под ваш стиль ===== */
+.btn-custom {
+  background-color: var(--custom-accent);
+  border-color: var(--custom-accent);
+  color: #fff;
+}
+
+.btn-custom:hover {
+  background-color: var(--custom-accent-hover);
+  border-color: var(--custom-accent-hover);
+}
+
+.btn-outline-custom {
+  color: var(--custom-accent);
+  border-color: var(--custom-accent);
+}
+
+.btn-outline-custom:hover {
+  background-color: #fff5eb;
+  color: var(--custom-accent);
+}
+
+.btn-danger-custom {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger-custom:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* ===== Формы ===== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--custom-primary);
+  box-shadow: 0 0 0 0.25rem rgba(0, 86, 210, 0.25);
+}
+
+/* ===== Карточки и секции ===== */
+.card {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Для истории бронирований — фон карточки */
+.history-card {
+  background-color: var(--custom-bg-light);
+}
+
+/* ===== Навигация ===== */
+.nav-link,
+.footer-nav a {
+  font-weight: 600;
+  color: var(--custom-primary) !important;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.footer-nav a:hover {
+  color: #0040a0 !important;
+  text-decoration: underline;
+}
+
+/* ===== Поиск (hero-форма) ===== */
+.search-form .btn {
+  height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .search-form .btn {
+    grid-column: 1 !important;
+  }
+}
+
+/* ===== Статусы ===== */
+.status.active {
+  color: green;
+}
+.status.expired {
+  color: red;
+}
+
+/* ===== Прочее ===== */
+.total-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--custom-primary);
+}
+
+.card-date-cvv > :not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1050;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #999;
+      font-weight: bold;
+    }
+
+    .close:hover {
+      color: #333;
+    }
+
+    /* Форма в модалке */
+    .modal form .mb-3:last-child {
+      margin-bottom: 0;
+    }
+/* Адаптив: изображения в истории */
+@media (max-width: 767.98px) {
+  .history-car img {
+    max-height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
